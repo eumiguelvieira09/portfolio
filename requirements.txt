@@ -4,7 +4,4 @@ streamlit
 reportlab
 openpyxl
 reportlab
-smtplib
 scikit-learn
-time
-PIL
