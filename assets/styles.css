@@ -1,0 +1,138 @@
+/* Ocultar a barra superior do Streamlit */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+.header-bar {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Adicionando margens para o título */
+.header-title {
+    margin-left: 90px;  /* Defina a margem da esquerda */
+    margin-right: 50px; /* Defina a margem da direita */
+    white-space: nowrap; /* Garante que o texto do título não quebre em linhas */
+}
+
+/* Fonte maior para desktop */
+@media (min-width: 768px) {
+    .header-title {
+        font-size: 32px;
+    }
+}
+
+/* Fonte menor para dispositivos móveis */
+@media (max-width: 767px) {
+    .header-title {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+.warning-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #cd4b42;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 9999; /* Mantém o aviso sempre no topo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    text-align: center;
+    width: 50%;
+    max-width: 400px;
+    pointer-events: none;  /* Previne interação com o aviso */
+    margin-left: 0 !important;  /* Remove qualquer ajuste de margem */
+    padding-left: 0 !important; /* Remove qualquer ajuste de padding */
+}
+
+.warning-container b {
+    font-size: 16px;
+}
+
+/* Remover margens e padding do corpo da página */
+.block-container {
+    padding-top: 70px; /* Espaço para a barra de cabeçalho fixa */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0;
+    max-width: 97%; /* Define a largura da página principal */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.main-content {
+    margin-top: 15px; /* Espaço abaixo da barra para o conteúdo principal */
+}
+/* Estiliza o botão */
+.st-emotion-cache-iiif1v.ef3psqc4 {
+    position: absolute; /* Posiciona o botão de forma absoluta em relação ao contêiner pai */
+    top: 0; /* Alinha o botão ao topo do contêiner pai */
+    left: 0; /* Alinha o botão à esquerda do contêiner pai */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento interno, se houver */
+    display: flex; /* Garantir que o conteúdo interno se alinhe corretamente */
+    align-items: center; /* Alinhar verticalmente o SVG no centro do botão */
+    z-index: 1000; /* Garante que o botão fique sobre outros elementos, se necessário */
+}
+
+/*ocultar botao de fullscreen na logo*/
+[data-testid="StyledFullScreenButton"] {
+    display: none !important;
+}
+
+div[data-testid="stSidebarCollapseButton"] {
+    z-index: 100;  /* Garante que o botão de colapsar sidebar não afete o aviso */
+}
+div[data-testid="stSidebarCollapseButton"] svg.eyeqlp51.st-emotion-cache-1pbsqtx.ex0cdmw0 {
+    fill: #000000 !important; /* Cor do ícone */
+    width: 60px; /* Ajusta a largura do ícone */
+    height: 20px; /* Ajusta a altura do ícone */
+}
+
+
+path[d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"] {
+    fill: rgb(255, 255, 255); /* Altere para a cor desejada */
+    width: 60px !important; /* Ajusta a largura do ícone */
+    height: 40px !important; /* Ajusta a altura do ícone */
+}
+path[d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"] {
+    fill: rgb(0, 0, 0); /* Escolha a cor desejada */
+}
+
+svg[data-baseweb="icon"][title="Delete"] {
+    display: none;
+}
+
+svg[title="Clear all"],
+svg[aria-label="Clear all"] {
+    display: none;
+}
