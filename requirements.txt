@@ -1,7 +1,6 @@
 pandas
 Requests
 streamlit
-collections
 reportlab
 tempfile
 openpyxl
