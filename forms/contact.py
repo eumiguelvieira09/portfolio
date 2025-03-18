@@ -12,7 +12,7 @@ import aviso
 # Nome do arquivo CSV para armazenar os dados localmente
 CSV_FILE = "dados_formulario.csv"
 
-WEBHOOK_URL = st.secrets["WEBHOOK_URL"]
+WEBHOOK_URL = "https://google.com.br"
 
 def is_valid_email(email):
     """Valida se o email fornecido é válido."""
