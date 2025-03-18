@@ -2,7 +2,6 @@ pandas
 Requests
 streamlit
 reportlab
-tempfile
 openpyxl
 reportlab
 smtplib
