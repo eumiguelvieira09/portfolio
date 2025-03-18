@@ -243,7 +243,7 @@ if not df.empty:
     if not graf1.empty:
         num_categorias1 = len(graf1)
         corgrafico1 = generate_colors(num_categorias1, corazul)
-        grafico1 = px.bar(df, y=graf1.index, x=graf1.values, orientation='h')
+        grafico1 = px.bar(graf1, y=graf1.index, x=graf1.values, orientation='h')
         grafico1.update_layout(title='Total de Despesas Empenhadas por Empresa', xaxis=dict(title=None), yaxis=dict(title=None), xaxis_fixedrange=True, yaxis_fixedrange=True)
         grafico1.update_traces(marker=dict(color=corgrafico1), hovertemplate=("Nome: <b>%{y}</b><br>Total: <b>%{x}</b><br>"), hoverlabel=dict(font_size=13))
     else:
