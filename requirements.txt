@@ -1,6 +1,6 @@
-pandas==2.2.2
-Requests==2.32.3
-streamlit==1.36.0
+pandas
+Requests
+streamlit
 collections
 reportlab
 tempfile
