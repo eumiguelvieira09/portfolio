@@ -11,8 +11,13 @@ import locale
 
 # Configuração de locale
 
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
-
+try:
+    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')  # Tenta UTF-8
+except locale.Error:
+    try:
+        locale.setlocale(locale.LC_ALL, 'pt_BR')  # Tenta sem UTF-8
+    except locale.Error:
+        locale.setlocale(locale.LC_ALL, '')  # Usa a configuração padrão do sistema
 st.set_page_config(
     page_title="Relatório de Obras",
     layout="wide",

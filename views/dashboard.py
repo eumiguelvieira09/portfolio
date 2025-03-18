@@ -26,8 +26,13 @@ config_graph = {
     "displaylogo": False
 }
 
-# Defina a localização para português do Brasil
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+try:
+    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')  # Tenta UTF-8
+except locale.Error:
+    try:
+        locale.setlocale(locale.LC_ALL, 'pt_BR')  # Tenta sem UTF-8
+    except locale.Error:
+        locale.setlocale(locale.LC_ALL, '')  # Usa a configuração padrão do sistema
 
 # Configuração da página
 st.set_page_config(
