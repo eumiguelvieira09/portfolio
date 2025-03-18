@@ -6,3 +6,7 @@ reportlab
 tempfile
 openpyxl
 reportlab
+smtplib
+scikit-learn
+time
+PIL
