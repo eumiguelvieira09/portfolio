@@ -20,6 +20,18 @@ with col2:
     )
     if st.button("✉️ Entre em Contato"):
         show_contact_form()
+    
+    pdf_file_path = r'assets/JOSEMIGUELVMESQUITA_CURRICULO.pdf'
+    # Lendo o arquivo PDF para que o Streamlit possa oferecê-lo para download
+    with open(pdf_file_path, "rb") as pdf_file:
+        pdf_data = pdf_file.read()
+    # Adicionando o botão de download no Streamlit
+    st.download_button(
+        label="Baixar Currículo",  # Texto do botão
+        data=pdf_data,  # O conteúdo do PDF
+        file_name="JOSEMIGUELVMESQUITA_CURRICULO.pdf",  # Nome do arquivo para o usuário baixar
+        mime="application/pdf"  # Tipo MIME do arquivo
+    )
 
 
 # --- EXPERIENCE & QUALIFICATIONS ---
