@@ -4,14 +4,16 @@ import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
+from dotenv import load_dotenv
 
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = "587"
-EMAIL_USERNAME = "miguelvieiradatascience@gmail.com"
-EMAIL_PASSWORD = "adzw fflv yzmk jwix"
-EMAIL_TO = "miguelvmesquitads@gmail.com"
+EMAIL_HOST = os.getenv("EMAIL_HOST")
+EMAIL_PORT = os.getenv("EMAIL_PORT")
+EMAIL_USERNAME = os.getenv("EMAIL_USERNAME")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+EMAIL_TO = os.getenv("EMAIL_TO")
 
+load_dotenv()
 
 # Caminho do arquivo CSV
 CSV_FILE = "dados_formulario.csv"

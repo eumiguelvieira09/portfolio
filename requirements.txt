@@ -6,3 +6,4 @@ openpyxl
 reportlab
 scikit-learn
 plotly
+python-dotenv
