@@ -117,8 +117,8 @@ def converte_br(numero):
                 valor_formatado = locale.format_string("%.2f", numero / s, grouping=True)
             return f"{'-' if negativo else ''}{valor_formatado}{suf[s]}"
 
-    # Se não se encaixar em nenhum sufixo, retorna o número formatado como moeda
-    return f"{'-' if negativo else ''}{locale.currency(numero, grouping=True, symbol='R$')}"
+    # # Se não se encaixar em nenhum sufixo, retorna o número formatado como moeda
+    # return f"{'-' if negativo else ''}{locale.currency(numero, grouping=True, symbol='R$')}"
 
 ###################################### CRIAÇÃO DE GRÁFICOS ###################################
 def grafico1(df):    
