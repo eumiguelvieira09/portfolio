@@ -77,10 +77,10 @@ pg = st.navigation(
     {
         "Info": [about_page],
         "Análise Descritiva": [project_1_page, project_2_page],
-        "Análise Preditiva": [project_3_page, project_4_page],
-        "Sistemas": [project_5_page, project_6_page,project_7_page, project_8_page],
+        "Análise Preditiva": [project_3_page],
+        "Sistemas": [project_6_page,project_8_page],
         "Outros": [project_9_page, project_10_page],
-        "Referências": [project_11_page],
+    #    "Referências": [project_11_page],
 
     }
 )
