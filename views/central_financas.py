@@ -43,6 +43,9 @@ if st.session_state.cargo is None:
             st.rerun()
         else:
             st.error("❌ Usuário ou senha incorretos.")
+
+    st.write("Nível coordenador: user2, senha: password12345678901234/" \
+    "Nível funcionário: user1, senha: password12345678901234")
     st.stop()
 
 # Caminho do arquivo de demandas

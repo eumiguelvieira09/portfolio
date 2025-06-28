@@ -100,7 +100,7 @@ with tab1:
         with col4:
             data_input = st.date_input("Escolha a data:", pd.to_datetime('today'))  # Padrão: hoje
         with col1:
-            st.subheader("Saúde/Aparência")  # Título da coluna 1
+            st.subheader("Saúde")  # Título da coluna 1
 
             exercicios = st.number_input("Quanto tempo de exercício você fez hoje:", min_value=0, step=1)
             exercicios_feitos = st.multiselect(
